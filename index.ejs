@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TimeTable Search</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f4f4f4;
+        }
+
+        h1 {
+            color: #333;
+            text-align: center;
+        }
+
+        form {
+            max-width: 600px; /* Adjust the max-width to fit your layout */
+            margin: 0 auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+            color: #333;
+        }
+
+        input[type="text"] {
+            width: calc(100% - 20px);
+            padding: 4px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+
+        button[type="submit"],
+        button[type="reset"] {
+            grid-column: span 1;
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s;
+            margin-top: 10px;
+        }
+
+        button[type="submit"]:hover,
+        button[type="reset"]:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <h1>TimeTable Search</h1>
+    <form action="/search" method="POST">
+        <label for="Term">Term:</label>
+        <input type="text" id="Term" name="Term">
+
+        <label for="section_UMS">Section on UMS:</label>
+        <input type="text" id="section_UMS" name="section_UMS">
+
+        <label for="program_name">Program Name:</label>
+        <input type="text" id="program_name" name="program_name">
+
+        <label for="course_code">Course Code:</label>
+        <input type="text" id="course_code" name="course_code">
+
+        <label for="course_title">Course Title:</label>
+        <input type="text" id="course_title" name="course_title">
+
+        <label for="Faculty_name">Faculty Name:</label>
+        <input type="text" id="Faculty_name" name="Faculty_name">
+
+        <label for="UID">Faculty UID:</label>
+        <input type="text" id="UID" name="UID">
+
+        <label for="Day">Day:</label>
+        <input type="text" id="Day" name="Day">
+
+        <label for="Time">Time:</label>
+        <input type="text" id="Time" name="Time">
+
+        <button type="submit">Search</button>
+        <button type="reset">Reset</button>
+    </form>
+</body>
+</html>

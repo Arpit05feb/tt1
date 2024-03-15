@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search Results</title>
+    <style>
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+    </style>
+</head>
+<body>
+    <h1>TimeTable Search Results</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>S.No.</th>
+                <th>Term</th>
+                <th>Section</th>
+                <th>Program Code</th>
+                <th>Program Name</th>
+                <th>Course Code</th>
+                <th>Course Title</th>
+                <th>CrsType</th>
+                <th>Hour</th>
+                <th>Section UMS</th>
+                <th>UID</th>
+                <th>Faculty Name</th>
+                <th>Day</th>
+                <th>Time</th>
+                <th>Room</th>
+                <th>AttendanceType</th>
+                <th>AttendanceDate</th>
+                <th>AttendanceTime</th>
+                <th>TermID</th>
+            </tr>
+        </thead>
+        <tbody>
+            <% matchingRows.forEach((row, index) => { %>
+                <tr>
+                    <td><%= index + 1 %></td>
+                    <td><%= row.Term %></td>
+                    <td><%= row.Section %></td>
+                    <td><%= row.program_code %></td>
+                    <td><%= row.program_name %></td>
+                    <td><%= row.course_code %></td>
+                    <td><%= row.course_title %></td>
+                    <td><%= row.CrsType %></td>
+                    <td><%= row.hour %></td>
+                    <td><%= row.section_UMS %></td>
+                    <td><%= row.UID %></td>
+                    <td><%= row.Faculty_name %></td>
+                    <td><%= row.Day %></td>
+                    <td><%= row.Time %></td>
+                    <td><%= row.Room %></td>
+                    <td><%= row.AttendanceType %></td>
+                    <td><%= row.AttendanceDate %></td>
+                    <td><%= row.AttendanceTime %></td>
+                    <td><%= row.TermID %></td>
+                </tr>
+            <% }); %>
+        </tbody>
+    </table>
+</body>
+</html>
